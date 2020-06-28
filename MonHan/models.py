@@ -20,25 +20,43 @@ class Symbol(models.Model):
 class Race(models.Model):
     name = models.CharField('種族名', max_length=6)
 
+    def __str__(self):
+        return self.name
+
 # 咆哮
 class Roar(models.Model):
     name = models.CharField('咆哮名', max_length=4)
+
+    def __str__(self):
+        return self.name
 
 # 風圧
 class Fuatsu(models.Model):
     name = models.CharField('風圧名', max_length=4)
 
+    def __str__(self):
+        return self.name
+
 # 震動
 class Vibration(models.Model):
     name = models.CharField('震動名', max_length=4)
+
+    def __str__(self):
+        return self.name
 
 # やられ
 class Yarare(models.Model):
     name = models.CharField('やられ名', max_length=8)
 
+    def __str__(self):
+        return self.name
+
 # 状態異常
 class JyotaiIjyo(models.Model):
     name = models.CharField('状態異常名', max_length=8)
+
+    def __str__(self):
+        return self.name
 
 # モンスター
 class Monster(models.Model):
