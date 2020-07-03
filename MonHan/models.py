@@ -26,30 +26,6 @@ class Symbol(models.Model):
         return self.symbolType
 
 
-# 種族
-class Race(models.Model):
-    class Meta:
-        verbose_name = "種族名"
-        verbose_name_plural = "種族名"
-
-    name = models.CharField("種族名", max_length=6)
-
-    def __str__(self):
-        return self.name
-
-
-# 咆哮
-class Roar(models.Model):
-    class Meta:
-        verbose_name = "咆哮"
-        verbose_name_plural = "咆哮"
-
-    name = models.CharField("咆哮名", max_length=4)
-
-    def __str__(self):
-        return self.name
-
-
 # 風圧
 class Fuatsu(models.Model):
     class Meta:
@@ -104,15 +80,25 @@ class Monster(models.Model):
         verbose_name = "モンスター"
         verbose_name_plural = "モンスター"
 
+    # 種族名
+    RACE = (
+        (1, "鳥竜種"),
+        (2, "牙竜種"),
+        (3, "魚竜種"),
+        (4, "遺存種"),
+        (5, "飛竜種"),
+        (6, "古龍種"),
+        (7, "獣竜種"),
+    )
+
+    # 咆哮
+    ROAR = ((1, "大"), (2, "小"), (3, "なし"))
+
     # 基本情報
     name = models.CharField("モンスター名", max_length=200)
     series = models.ForeignKey(Series, verbose_name="シリーズ", on_delete=models.PROTECT)
-    erce = models.ForeignKey(
-        Race, verbose_name="種族", on_delete=models.PROTECT, null=True
-    )
-    roar = models.ForeignKey(
-        Roar, verbose_name="咆哮", on_delete=models.PROTECT, null=True
-    )
+    race = models.IntegerField("種族", choices=RACE)
+    roar = models.IntegerField("咆哮", choices=ROAR)
     fuatsu = models.ForeignKey(
         Fuatsu, verbose_name="風圧", on_delete=models.PROTECT, null=True
     )
