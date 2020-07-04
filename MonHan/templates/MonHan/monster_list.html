@@ -1,17 +1,38 @@
 {% extends 'MonHan/base.html' %}
 
 {% block content %}
-    {% for mons in monster %}
-    <!-- モンスターリスト -->>
+    <!-- モンスターリスト -->
     <div class="list">
-        <!-- -->
+        {% for mons in monster %}
+        <!-- コメント -->
         <div class="list_header">
-            {{ mons.name }}
-            {{ mons.get_series_display}}
+            <div class="name">
+                {{ mons.name }}
+            </div>
+            <div>
+                {{ mons.get_series_display}}
+            </div>
         </div>
-        <div class="list_details">
-            {{ mons.get_jyaku_hi_display}}
+        <div id="jyaku">
+            <div class="details_header">
+                <label>弱点属性</label>
+            </div>
+            <div class="details_title">
+                <span>火</span>
+                <span>水</span>
+                <span>雷</span>
+                <span>氷</span>
+                <span>龍</span>
+            </div>
+            <div class="details_item">
+                <span>{{ mons.get_jyaku_hi_display}}</span>
+                <span>{{ mons.get_jyaku_mizu_display}}</span>
+                <span>{{ mons.get_jyaku_kami_display}}</span>
+                <span>{{ mons.get_jyaku_kori_display}}</span>
+                <span>{{ mons.get_jyaku_ryu_display}}</span>
+            </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
+    
 {% endblock %}

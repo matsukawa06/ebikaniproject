@@ -1,3 +1,5 @@
+/* 値の指定順番 [上右下左]*/
+
 * {
     margin: 0;
 }
@@ -8,13 +10,59 @@ body {
 
 body > header {
     font-size: 40px;
-    background-color: #C0C0C0;
+    color: white;
+    background-color: #FF9872;
+    padding-left: 3px;
 }
 
+/* モンスターリスト全体の設定 */
 .list {
     margin: 10px 10px 10px 10px;
-    padding-left: 5px;
-    padding-right: 5px;
     font-size: 22px;
-    border: 1px solid;
+    border: 1px solid #CCCCCC;
+}
+
+/* モンスター名が表示される行 */
+.list_header {
+    display: block;
+    padding-left: 5px;
+}
+
+.list_header > div {
+    display: inline-block;
+}
+
+.list_header > .name {
+    width: 70%;
+}
+
+/* 明細のヘッダー（弱点属性 等） */
+.details_header {
+    padding-left: 5px;
+    border-top: 1px solid #CCCCCC;
+    background-color: #EEFFFF;
+}
+
+/* 明細のタイトル（火 等） */
+.details_title {
+    border-top: 1px solid #CCCCCC;
+    background-color: #EEFFFF;
+}
+.details_title > span {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid #CCCCCC;
+}
+
+/* 明細の値（◎ 等） */
+.details_item {
+    border-top: 1px solid #CCCCCC;
+}
+
+.details_item > span {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid #CCCCCC;
 }
