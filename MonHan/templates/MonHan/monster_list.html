@@ -2,7 +2,16 @@
 
 {% block content %}
     {% for mons in monster %}
-        {{ mons.name }}
-        {{ mons.get_series_display}}
+    <!-- モンスターリスト -->>
+    <div class="list">
+        <!-- -->
+        <div class="list_header">
+            {{ mons.name }}
+            {{ mons.get_series_display}}
+        </div>
+        <div class="list_details">
+            {{ mons.get_jyaku_hi_display}}
+        </div>
+    </div>
     {% endfor %}
 {% endblock %}
