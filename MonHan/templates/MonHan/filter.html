@@ -1,0 +1,5 @@
+<form method="GET" action="{% url 'MonHan:index' %}">
+    <input type="search" name="name" placeholder="モンスター名" value="{{request.GET.name}}">
+    {{ form }}
+    <button tyle="submit">絞り込み</button>
+</form>

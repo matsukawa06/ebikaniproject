@@ -2,9 +2,8 @@
 
 {% block content %}
     <!-- 絞り込み条件 -->
-    <div>
-        
-    </div>
+    <!-- filter.html -->
+    {% include 'MonHan/filter.html' %}
 
     <!-- モンスターリスト -->
     <div class="list">
@@ -15,6 +14,9 @@
             <label class="acd-label" for="acd-check1">
                 <div class="name">
                     {{ mons.name }}
+                </div>
+                <div>
+                    {{ mons.get_race_display }}
                 </div>
                 <div>
                     {{ mons.get_series_display}}
