@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('monhan/', include('MonHan.urls')),
     path('myprofile/', include('myprofile.urls')),
+    path('diaries/', include('diaries.urls')),
 ]
