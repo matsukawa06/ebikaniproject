@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 INSTALLED_APPS = [
     'myprofile.apps.MyprofileConfig',
     'diaries.apps.DiariesConfig',
+    'reviews.apps.ReviewsConfig',
     'MonHan.apps.MonhanConfig',
     'import_export',
     'django.contrib.admin',

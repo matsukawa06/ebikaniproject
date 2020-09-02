@@ -21,4 +21,5 @@ urlpatterns = [
     path('monhan/', include('MonHan.urls')),
     path('myprofile/', include('myprofile.urls')),
     path('diaries/', include('diaries.urls')),
+    path('reviews/', include('reviews.urls')),
 ]

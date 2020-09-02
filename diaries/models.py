@@ -19,5 +19,5 @@ class Diary(models.Model):
     def __str__(self):
         return 'カテゴリ:{} 本文:{}'.format(self.category, self.text[:10])
 
-    def get_title(self):
+    def get_title(self):  
         return 'カテゴリ:{} 本文:{}'.format(self.category, self.text[:10])
