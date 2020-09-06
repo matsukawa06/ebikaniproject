@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'myprofile.apps.MyprofileConfig',
     'diaries.apps.DiariesConfig',
     'reviews.apps.ReviewsConfig',
+    'contact.apps.ContactConfig',
+    'blog.apps.BlogConfig',
     'MonHan.apps.MonhanConfig',
     'import_export',
     'django.contrib.admin',
@@ -124,3 +126,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# 送信したメールをコマンドライン上に表示するための設定
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

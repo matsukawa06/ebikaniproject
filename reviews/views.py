@@ -27,6 +27,7 @@ class ReviewDelete(generic.DeleteView):
 # get_object_or_404 を使用しない場合の書き方
 """ 
 def review_detail(request, pk):
+    
     try:
         review = Review.objects.get(pk=pk)
     except Review.DoesNotExist:
