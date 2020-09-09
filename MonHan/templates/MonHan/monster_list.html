@@ -1,100 +1,100 @@
 {% extends 'MonHan/base.html' %}
 
 {% block content %}
-    <!-- 絞り込み条件 -->
-    <!-- filter.html -->
-    {% include 'MonHan/filter.html' %}
+<!-- 絞り込み条件 -->
+<!-- filter.html -->
+{% include 'MonHan/filter.html' %}
 
-    <!-- モンスターリスト -->
-    <div class="list">
-        {% for mons in monster %}
-        <!-- モンスター名を表示する行 -->
-        <div class="list_header">
-            <input id="acd-check1" class="acd-check" type="checkbox">
-            <label class="acd-label" for="acd-check1">
-                <div class="name">
-                    {{ mons.name }}
-                </div>
-                <div>
-                    {{ mons.get_race_display }}
-                </div>
-                <div>
-                    {{ mons.get_series_display}}
-                </div>
-            </label>
-        </div>
-        <!-- アコーディオンで非表示にする範囲 -->
-        <div class="acd-content">
-            <!-- 弱点属性を表示する行 -->
-            <div id="jyaku">
-                <div class="details_header">
-                    <label>弱点属性</label>
-                </div>
-                <div class="details_title">
-                    <span>火</span>
-                    <span>水</span>
-                    <span>雷</span>
-                    <span>氷</span>
-                    <span>龍</span>
-                </div>
-                <div class="details_item">
-                    <span>{{ mons.get_jyaku_hi_display}}</span>
-                    <span>{{ mons.get_jyaku_mizu_display}}</span>
-                    <span>{{ mons.get_jyaku_kami_display}}</span>
-                    <span>{{ mons.get_jyaku_kori_display}}</span>
-                    <span>{{ mons.get_jyaku_ryu_display}}</span>
-                </div>
+<!-- モンスターリスト -->
+<div class="list">
+    {% for mons in monster %}
+    <!-- モンスター名を表示する行 -->
+    <div class="list_header">
+        <input id="acd-check{{ forloop.counter }}" class="acd-checkbox" type="checkbox">
+        <label class="acd-label" for="acd-check{{ forloop.counter }}">
+            <div class="name" id="test">
+                {{ mons.name }}
             </div>
-            <!-- 状態異常耐性を表示する行 -->
-            <div id="ijyo">
-                <div class="details_header">
-                    <label>状態異常耐性</label>
-                </div>
-                <div class="details_title">
-                    <span>毒</span>
-                    <span>睡眠</span>
-                    <span>麻痺</span>
-                    <span>気絶</span>
-                    <span>滅気</span>
-                    <span>爆破</span>
-                    <span>乗り</span>
-                </div>
-                <div class="details_item">
-                    <span>{{ mons.get_ijyo_doku_display}}</span>
-                    <span>{{ mons.get_ijyo_suimin_display}}</span>
-                    <span>{{ mons.get_ijyo_mahi_display}}</span>
-                    <span>{{ mons.get_ijyo_kizetsu_display}}</span>
-                    <span>{{ mons.get_ijyo_meki_display}}</span>
-                    <span>{{ mons.get_ijyo_bakuha_display}}</span>
-                    <span>{{ mons.get_ijyo_nori_display}}</span>
-                </div>
+            <div>
+                {{ mons.get_race_display }}
             </div>
-            <!-- アイテム耐性を表示する行 -->
-            <div id="item">
-                <div class="details_header">
-                    <label>アイテム耐性</label>
-                </div>
-                <div class="details_title">
-                    <span>閃光</span>
-                    <span>音爆</span>
-                    <span>こやし玉</span>
-                    <span>シビレ罠</span>
-                    <span>落し穴</span>
-                    <span>ツタ</span>
-                    <span>罠肉</span>
-                </div>
-                <div class="details_item">
-                    <span>{{ mons.get_item_senko_display}}</span>
-                    <span>{{ mons.get_item_otobaku_display}}</span>
-                    <span>{{ mons.get_item_koyashi_display}}</span>
-                    <span>{{ mons.get_item_shibire_display}}</span>
-                    <span>{{ mons.get_item_otoshi_display}}</span>
-                    <span>{{ mons.get_item_tsuta_display}}</span>
-                    <span>{{ mons.get_item_wananiku_display}}</span>
-                </div>
+            <div>
+                {{ mons.get_series_display}}
             </div>
-        </div>
-        {% endfor %}
+        </label>
     </div>
-    
+    <!-- アコーディオンで非表示にする範囲 -->
+    <div class="acd-content">
+        <!-- 弱点属性を表示する行 -->
+        <div id="jyaku">
+            <div class="details_header">
+                <label>弱点属性</label>
+            </div>
+            <div class="details_title">
+                <span>火</span>
+                <span>水</span>
+                <span>雷</span>
+                <span>氷</span>
+                <span>龍</span>
+            </div>
+            <div class="details_item">
+                <span>{{ mons.get_jyaku_hi_display}}</span>
+                <span>{{ mons.get_jyaku_mizu_display}}</span>
+                <span>{{ mons.get_jyaku_kami_display}}</span>
+                <span>{{ mons.get_jyaku_kori_display}}</span>
+                <span>{{ mons.get_jyaku_ryu_display}}</span>
+            </div>
+        </div>
+        <!-- 状態異常耐性を表示する行 -->
+        <div id="ijyo">
+            <div class="details_header">
+                <label>状態異常耐性</label>
+            </div>
+            <div class="details_title">
+                <span>毒</span>
+                <span>睡眠</span>
+                <span>麻痺</span>
+                <span>気絶</span>
+                <span>滅気</span>
+                <span>爆破</span>
+                <span>乗り</span>
+            </div>
+            <div class="details_item">
+                <span>{{ mons.get_ijyo_doku_display}}</span>
+                <span>{{ mons.get_ijyo_suimin_display}}</span>
+                <span>{{ mons.get_ijyo_mahi_display}}</span>
+                <span>{{ mons.get_ijyo_kizetsu_display}}</span>
+                <span>{{ mons.get_ijyo_meki_display}}</span>
+                <span>{{ mons.get_ijyo_bakuha_display}}</span>
+                <span>{{ mons.get_ijyo_nori_display}}</span>
+            </div>
+        </div>
+        <!-- アイテム耐性を表示する行 -->
+        <div id="item">
+            <div class="details_header">
+                <label>アイテム耐性</label>
+            </div>
+            <div class="details_title">
+                <span>閃光</span>
+                <span>音爆</span>
+                <span>こやし玉</span>
+                <span>シビレ罠</span>
+                <span>落し穴</span>
+                <span>ツタ</span>
+                <span>罠肉</span>
+            </div>
+            <div class="details_item">
+                <span>{{ mons.get_item_senko_display}}</span>
+                <span>{{ mons.get_item_otobaku_display}}</span>
+                <span>{{ mons.get_item_koyashi_display}}</span>
+                <span>{{ mons.get_item_shibire_display}}</span>
+                <span>{{ mons.get_item_otoshi_display}}</span>
+                <span>{{ mons.get_item_tsuta_display}}</span>
+                <span>{{ mons.get_item_wananiku_display}}</span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}

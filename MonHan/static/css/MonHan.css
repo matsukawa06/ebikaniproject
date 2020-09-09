@@ -38,8 +38,10 @@ body > header {
 .list_header .name {
     width: 70%;
 }
-/*
-.acd-check {
+
+/* アコーディオン設定 */
+
+.acd-checkbox {
     display: none;
 }
 
@@ -54,10 +56,16 @@ body > header {
     visibility: hidden;
 }
 
-.acd-check:checked .acd-content {
-    height: 40px;
+.acd-checkbox:checked ~ .acd-content {
+    height: 100px;
     opacity: 1;
+    transition: 0.5s;
     visibility: visible;
+}
+
+/*
+.acd-checkbox:checked ~ #test {
+    background-color: #FF9872;
 }
 */
 /* 明細のヘッダー（弱点属性 等） */
