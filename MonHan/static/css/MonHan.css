@@ -49,6 +49,13 @@ body > header {
     width: 70%;
 }
 
+.list_header .race {
+    width: 15%;
+    padding-left: 5px;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+
 /* アコーディオン設定 */
 
 .acd-checkbox {
