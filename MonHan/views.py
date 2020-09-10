@@ -17,7 +17,7 @@ def is_valid_q(q):
 def index(request):
     CreateMyModelView.as_view()
 
-    monster = Monster.objects.all().order_by('-name')
+    monster = Monster.objects.all().order_by('name')
     name = request.GET.get('name')
     race = request.GET.get('race')
 
