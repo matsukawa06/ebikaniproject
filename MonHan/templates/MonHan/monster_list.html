@@ -9,20 +9,19 @@
 <div class="list">
     {% for mons in monster %}
     <!-- モンスター名を表示する行 -->
-    <div class="list_header">
-        <input id="acd-check{{ forloop.counter }}" class="acd-checkbox" type="checkbox">
-        <label class="acd-label" for="acd-check{{ forloop.counter }}">
-            <div class="name" id="test">
-                {{ mons.name }}
-            </div>
-            <div>
-                {{ mons.get_race_display }}
-            </div>
-            <div>
-                {{ mons.get_series_display}}
-            </div>
-        </label>
-    </div>
+    <input id="acd-check{{ forloop.counter }}" class="acd-checkbox" type="checkbox">
+    <label class="acd-label list_header" for="acd-check{{ forloop.counter }}">
+        <div class="name">
+            {{ mons.name }}
+        </div>
+        <div>
+            {{ mons.get_race_display }}
+        </div>
+        <div>
+            {{ mons.get_series_display}}
+        </div>
+    </label>
+
     <!-- アコーディオンで非表示にする範囲 -->
     <div class="acd-content">
         <!-- 弱点属性を表示する行 -->
