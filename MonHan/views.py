@@ -1,36 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Monster
-
+from django.views import generic
 from django.db.models import Q
-from .forms import MyModelForm
-from django.views.generic import CreateView
+from .forms import MonsterSearchForm
 
-# Create your views here.
-"""
-def monster_list(request):
-    monster = Monster.objects.all()
-    return render(request, 'MonHan/monster_list.html', {'monster': monster})"""
 
-def is_valid_q(q):
-    return q != '' and q is not None
-
-def index(request):
-    CreateMyModelView.as_view()
-
-    monster = Monster.objects.all().order_by('name')
-    name = request.GET.get('name')
-    race = request.GET.get('race')
-
-    if is_valid_q(name):
-        monster = monster.filter(name__icontains=name)
-
-    if is_valid_q(race):
-        monster = monster.filter(race__icontains=race)
-
-    return render(request, 'MonHan/monster_list.html', {'monster': monster, 'name': name})
-
-class CreateMyModelView(CreateView):
+class monster_list(generic.ListView):
     model = Monster
-    form_class = MyModelForm
-    template_name = 'MonHan/filter.html'
-    success_url = "/"   # 成功時にリダイレクトするURL
+    ordering = 'name'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        form = MonsterSearchForm(self.request.GET or None)
+        if form.is_valid():
+            key_word = form.cleaned_data.get('key_word')
+            if key_word:
+                queryset = queryset.filter(Q(name__icontains=key_word))
+        
+        return queryset

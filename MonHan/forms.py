@@ -1,7 +1,8 @@
-from django.forms import ModelForm
+from django import forms
 from .models import Monster
 
-class MyModelForm(ModelForm):
-    class Meta:
-        model = Monster 
-        fields = ['series','race']
+class MonsterSearchForm(forms.Form):
+    key_word = forms.CharField(
+        label='モンスター名', required=False,
+        widget=forms.TextInput(attrs={'class': 'input'})
+    )

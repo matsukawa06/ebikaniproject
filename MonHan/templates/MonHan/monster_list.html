@@ -1,13 +1,6 @@
 {% extends 'MonHan/base.html' %}
 
 {% block content %}
-<!-- 絞り込み条件 -->
-<div class="filter">
-    <!-- filter.html -->
-    {% include 'MonHan/filter.html' %}
-</div>
-
-
 <!-- モンスターリスト -->
 <div class="list">
     <!-- 一覧タイトル -->
@@ -23,7 +16,7 @@
         </div>
     </div>
 
-    {% for mons in monster %}
+    {% for mons in monster_list %}
     <!-- モンスター名を表示する行 -->
     <input id="acd-check{{ forloop.counter }}" class="acd-checkbox" type="checkbox">
     <label class="acd-label list_header" for="acd-check{{ forloop.counter }}">
