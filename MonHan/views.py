@@ -23,3 +23,6 @@ class monster_list(generic.ListView):
                 queryset = queryset.filter(race=race)
         
         return queryset
+
+def custom_list(request):
+    return render(request, 'MonHan/custom_list.html')

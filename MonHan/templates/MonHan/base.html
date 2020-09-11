@@ -16,9 +16,9 @@
     <header>モンスターワールド｜アイスボーン </header>
     <main>
         <div class="links">
-            <a href="MonHan:monster_list.html">モンスターリスト</a>
+            <a href="{% url 'MonHan:monster_list' %}">モンスターリスト</a>
             <label>｜</label>
-            <a href="#">カスタム強化リスト</a>
+            <a href="{% url 'MonHan:custom_list' %}">カスタム強化リスト</a>
         </div>
         {% block content %}
         {% endblock %}
