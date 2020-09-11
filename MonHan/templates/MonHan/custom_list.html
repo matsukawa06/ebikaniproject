@@ -1,10 +1,88 @@
 {% extends 'MonHan/base.html' %}
 
+{% block content %}
 <!-- カスタム強化リスト -->
-<div class="list">
-    <table>
+<div class="customlist">
+    <h1>カスタム強化リスト</h1>
+    <table border="1">
+        <!-- タイトル行 -->
+        <tr class="list_title">
+            <td>目的</td>
+            <td>レア</td>
+            <td>必要素材</td>
+            <td>個数</td>
+            <td>対象モンスター</td>
+            <td>対象地帯</td>
+            <td>Lv</td>
+        </tr>
+        <!-- カスタム枠の拡張行 -->
         <tr>
-            <td>test</td>
+            <td rowspan="10">カスタム枠の拡張</td>
+            <td rowspan="3">レア12 Lv1</td>
+            <td>大霊脈玉</td>
+            <td class="num">1</td>
+            <td>歴戦古龍</td>
+            <td>導き</td>
+            <td class="num">7</td>
+        </tr>
+        <tr>
+            <td>霊脈の古龍骨</td>
+            <td class="num">3</td>
+            <td>歴戦古龍</td>
+            <td>導き</td>
+            <td class="num">7</td>
+        </tr>
+        <tr>
+            <td>生者必滅の大剛角</td>
+            <td class="num">5</td>
+            <td>悉くネルギガンテ</td>
+            <td>導き</td>
+            <td class="num">7</td>
+        </tr>
+        <tr class="colorRow">
+            <td rowspan="3">レア12 Lv2</td>
+            <td>大霊脈玉</td>
+            <td class="num">1</td>
+            <td>歴戦古龍</td>
+            <td>導き</td>
+            <td class="num">7</td>
+        </tr>
+        <tr class="colorRow">
+            <td>霊脈の古龍骨</td>
+            <td class="num">3</td>
+            <td>歴戦古龍</td>
+            <td>導き</td>
+            <td class="num">7</td>
+        </tr>
+        <tr class="colorRow">
+            <td>歴戦の煌毛</td>
+            <td class="num">5</td>
+            <td>歴戦ラージャ</td>
+            <td>溶岩</td>
+            <td class="num">7</td>
+        </tr>
+        <tr>
+            <td rowspan="4">レア12 Lv3</td>
+            <td>大霊脈玉</td>
+            <td class="num">1</td>
+            <td>歴戦古龍</td>
+            <td>導き</td>
+            <td class="num">7</td>
+        </tr>
+        <tr>
+            <td>霊脈の古龍骨</td>
+            <td class="num">3</td>
+            <td>歴戦古龍</td>
+            <td>導き</td>
+            <td class="num">7</td>
+        </tr>
+        <tr>
+            <td>歴戦の殲滅角</td>
+            <td class="num">5</td>
+            <td>歴戦悉くネルギガンテ</td>
+            <td>導き</td>
+            <td class="num">7</td>
         </tr>
     </table>
 </div>
+{% endblock %}

@@ -136,3 +136,28 @@ body > header {
     text-align: center;
     border-right: 1px solid #CCCCCC;
 }
+
+
+/* カスタム強化リストで使う */
+.customlist {
+    margin: 0px 100px 0px 100px;
+    font-size: 16px;
+}
+
+.customlist > table{
+    width: 100%;
+    border-color: #CCCCCC;
+    border-collapse: collapse;
+}
+.customlist > table td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.num {
+    text-align: right;
+}
+
+.colorRow {
+    background-color: lemonchiffon;
+}
