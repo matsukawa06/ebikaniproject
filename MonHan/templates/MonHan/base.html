@@ -1,16 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>モンスターリスト</title>
-        <link rel="stylesheet" href="{% static 'css/MonHan.css' %}">
-    </head>
-    <body>
-        <header>モンスターリスト</header>
-        <main>
-            {% block content %}
-            {% endblock %}
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>モンスターリスト</title>
+    <link rel="stylesheet" href="{% static 'css/MonHan.css' %}">
+    <script src="{% static 'js/common.js' %}"></script>
+</head>
+
+<body>
+    <header>モンスターリスト</header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <div id="page_top"><a href="#">TOP</a></div>
+</body>
+
 </html>
