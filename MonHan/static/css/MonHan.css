@@ -32,6 +32,12 @@ body > header {
     text-decoration: none;
 }
 
+/* ページ切替リンク */
+.links {
+    width: 90%;
+    text-align: right;
+}
+
 /* 絞り込み条件の設定 */
 .filter {
     margin: 10px 100px 5px 100px;
