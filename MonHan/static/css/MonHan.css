@@ -36,6 +36,9 @@ body > header {
 .filter {
     margin: 10px 100px 5px 100px;
 }
+.field {
+    display: inline-block;
+}
 
 /* モンスターリスト全体の設定 */
 .list {
