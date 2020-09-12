@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'blog.apps.BlogConfig',
     'MonHan.apps.MonhanConfig',
-    'import_export',
+    #'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
