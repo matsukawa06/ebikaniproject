@@ -1,6 +1,7 @@
-from import_export import resources
+#from import_export import resources
 from .models import Monster
 
+"""
 # CSVでモンスター情報をインポートするための定義
 class MonsterResource(resources.ModelResource):
 
@@ -9,3 +10,4 @@ class MonsterResource(resources.ModelResource):
         skip_unchanged = True
         report_skipped = False
         import_id_fields = ('name',)
+"""
