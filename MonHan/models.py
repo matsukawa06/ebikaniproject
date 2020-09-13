@@ -40,7 +40,10 @@ class Monster(models.Model):
         (7, '気絶'),
         (8, '防御力DOWN'),
         (9, '瘴気浸食状態'),
-        (10, 'なし')
+        (10, '泥'),
+        (11, '凍結やられ'),
+        (12, '火'),
+        (13, 'なし')
     )
 
     # 基本情報
@@ -48,9 +51,11 @@ class Monster(models.Model):
     series = models.IntegerField("シリーズ", choices=SERIES, null=True, blank=True)
     race = models.IntegerField("種族", choices=RACE, null=True, blank=True)
     roar = models.IntegerField("咆哮", choices=DAISYO, null=True, blank=True)
-    fuatsu = models.IntegerField("風圧", choices=DAISYO, null=True, blank=True)
+    fuatsu1 = models.IntegerField("風圧１", choices=DAISYO, null=True, blank=True)
+    fuatsu2 = models.IntegerField("風圧２", choices=YARARE, null=True, blank=True)
     vibration = models.IntegerField("震動", choices=DAISYO, null=True, blank=True)
-    yarare = models.IntegerField("やられ", choices=YARARE, null=True, blank=True)
+    yarare1 = models.IntegerField("やられ１", choices=YARARE, null=True, blank=True)
+    yarare2 = models.IntegerField("やられ２", choices=YARARE, null=True, blank=True)
     jyotaiijyo = models.IntegerField("状態異常", choices=JYOTAIIJYO, null=True, blank=True)
 
     # シンボル

@@ -16,7 +16,7 @@
             モンスター名
         </div>
         <div class="race">
-            種別
+            種族
         </div>
         <div>
             シリーズ
@@ -40,6 +40,21 @@
 
     <!-- アコーディオンで非表示にする範囲 -->
     <div class="acd-content">
+        <!-- 咆哮とか -->
+        <div class="details_title">
+            <span>咆哮</span>
+            <span>風圧</span>
+            <span>震動</span>
+            <span>やられ</span>
+            <span>状態異常</span>
+        </div>
+        <div class="details_item">
+            <span>{{ mons.get_roar_display }}</span>
+            <span>{{ mons.get_fuatsu1_display }}</span>
+            <span>{{ mons.get_vibration_display }}</span>
+            <span>{{ mons.get_yarare1_display }}</span>
+            <span>{{ mons.get_jyotaiijyo_display }}</span>
+        </div>
         <!-- 弱点属性を表示する行 -->
         <div id="jyaku">
             <div class="details_header">
