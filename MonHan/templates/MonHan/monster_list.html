@@ -2,9 +2,13 @@
 {% load monhan %}
 
 {% block content %}
+<!-- ページタイトル -->
+<div class="page_title">
+    <h1>モンスターリスト</h1>
+</div>
+
 <!-- 絞り込み条件 -->
 <div class="filter">
-    <h1>モンスターリスト</h1>
     {% create_search_form request %}
 </div>
 
@@ -18,7 +22,7 @@
         <div class="race">
             種族
         </div>
-        <div>
+        <div class="series">
             シリーズ
         </div>
     </div>
@@ -33,7 +37,7 @@
         <div class="race">
             {{ mons.get_race_display }}
         </div>
-        <div>
+        <div class="series">
             {{ mons.get_series_display}}
         </div>
     </label>
