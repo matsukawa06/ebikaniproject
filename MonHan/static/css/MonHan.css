@@ -80,7 +80,11 @@ body > header {
     width: 15%;
     padding-left: 5px;
     border-left: 1px solid #CCCCCC;
-    border-right: 1px solid #CCCCCC;
+}
+.list_header .series {
+    /*width: 14%;*/
+    padding-left: 5px;
+    border-left: 1px solid #CCCCCC;
 }
 
 /* アコーディオン設定 */

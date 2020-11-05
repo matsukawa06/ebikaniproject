@@ -11,4 +11,3 @@ class MonsterSearchForm(forms.Form):
         label='', required=False,
         choices=BLANK_CHOICE_DASH + list(Monster.RACE),
     )
-    
